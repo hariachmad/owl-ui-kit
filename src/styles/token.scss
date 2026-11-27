@@ -1,0 +1,411 @@
+
+$palette: (
+    primary: (
+        50:  #eef4ff,
+        100: #d9e6ff,
+        200: #bcd3ff,
+        300: #8eb6ff,
+        400: #598dff,
+        500: #3366ff,
+        600: #1f4df0,
+        700: #1a3ed6,
+        800: #1c36ad,
+        900: #1d3489,
+    ),
+    secondary: (
+        50:  #f5f3ff,
+        100: #ede9fe,
+        200: #ddd6fe,
+        300: #c4b5fd,
+        400: #a78bfa,
+        500: #8b5cf6,
+        600: #7c3aed,
+        700: #6d28d9,
+        800: #5b21b6,
+        900: #4c1d95,
+    ),
+    neutral: (
+        0:   #ffffff,
+        50:  #f8fafc,
+        100: #f1f5f9,
+        200: #e2e8f0,
+        300: #cbd5e1,
+        400: #94a3b8,
+        500: #64748b,
+        600: #475569,
+        700: #334155,
+        800: #1e293b,
+        900: #0f172a,
+        1000: #000000,
+    ),
+    success: (
+        50:  #ecfdf5,
+        100: #d1fae5,
+        500: #10b981,
+        600: #059669,
+        700: #047857,
+    ),
+    warning: (
+        50:  #fffbeb,
+        100: #fef3c7,
+        500: #f59e0b,
+        600: #d97706,
+        700: #b45309,
+    ),
+    danger: (
+        50:  #fef2f2,
+        100: #fee2e2,
+        500: #ef4444,
+        600: #dc2626,
+        700: #b91c1c,
+    ),
+    info: (
+        50:  #ecfeff,
+        100: #cffafe,
+        500: #06b6d4,
+        600: #0891b2,
+        700: #0e7490,
+    ),
+);
+
+$semantic-light: (
+    bg-page:            map-get(map-get($palette, neutral), 50),
+    bg-surface:         map-get(map-get($palette, neutral), 0),
+    bg-surface-raised:  map-get(map-get($palette, neutral), 0),
+    bg-surface-sunken:  map-get(map-get($palette, neutral), 100),
+    bg-overlay:         rgba(15, 23, 42, 0.5),
+
+    text-default:       map-get(map-get($palette, neutral), 900),
+    text-muted:         map-get(map-get($palette, neutral), 600),
+    text-subtle:        map-get(map-get($palette, neutral), 500),
+    text-disabled:      map-get(map-get($palette, neutral), 400),
+    text-inverse:       map-get(map-get($palette, neutral), 0),
+    text-link:          map-get(map-get($palette, primary), 600),
+    text-link-hover:    map-get(map-get($palette, primary), 700),
+
+    border-default:     map-get(map-get($palette, neutral), 200),
+    border-strong:      map-get(map-get($palette, neutral), 300),
+    border-focus:       map-get(map-get($palette, primary), 500),
+
+    action-primary:         map-get(map-get($palette, primary), 500),
+    action-primary-hover:   map-get(map-get($palette, primary), 600),
+    action-primary-active:  map-get(map-get($palette, primary), 700),
+    action-primary-text:    map-get(map-get($palette, neutral), 0),
+
+    action-secondary:        map-get(map-get($palette, neutral), 100),
+    action-secondary-hover:  map-get(map-get($palette, neutral), 200),
+    action-secondary-active: map-get(map-get($palette, neutral), 300),
+    action-secondary-text:   map-get(map-get($palette, neutral), 800),
+
+    success:        map-get(map-get($palette, success), 600),
+    success-bg:     map-get(map-get($palette, success), 50),
+    warning:        map-get(map-get($palette, warning), 600),
+    warning-bg:     map-get(map-get($palette, warning), 50),
+    danger:         map-get(map-get($palette, danger), 600),
+    danger-bg:      map-get(map-get($palette, danger), 50),
+    info:           map-get(map-get($palette, info), 600),
+    info-bg:        map-get(map-get($palette, info), 50),
+);
+
+$semantic-dark: (
+    bg-page:            map-get(map-get($palette, neutral), 900),
+    bg-surface:         map-get(map-get($palette, neutral), 800),
+    bg-surface-raised:  map-get(map-get($palette, neutral), 700),
+    bg-surface-sunken:  #0b1220,
+    bg-overlay:         rgba(0, 0, 0, 0.65),
+
+    text-default:       map-get(map-get($palette, neutral), 50),
+    text-muted:         map-get(map-get($palette, neutral), 300),
+    text-subtle:        map-get(map-get($palette, neutral), 400),
+    text-disabled:      map-get(map-get($palette, neutral), 500),
+    text-inverse:       map-get(map-get($palette, neutral), 900),
+    text-link:          map-get(map-get($palette, primary), 300),
+    text-link-hover:    map-get(map-get($palette, primary), 200),
+
+    border-default:     map-get(map-get($palette, neutral), 700),
+    border-strong:      map-get(map-get($palette, neutral), 600),
+    border-focus:       map-get(map-get($palette, primary), 400),
+
+    action-primary:         map-get(map-get($palette, primary), 400),
+    action-primary-hover:   map-get(map-get($palette, primary), 300),
+    action-primary-active:  map-get(map-get($palette, primary), 200),
+    action-primary-text:    map-get(map-get($palette, neutral), 900),
+
+    action-secondary:        map-get(map-get($palette, neutral), 700),
+    action-secondary-hover:  map-get(map-get($palette, neutral), 600),
+    action-secondary-active: map-get(map-get($palette, neutral), 500),
+    action-secondary-text:   map-get(map-get($palette, neutral), 50),
+
+    success:        map-get(map-get($palette, success), 500),
+    success-bg:     rgba(16, 185, 129, 0.15),
+    warning:        map-get(map-get($palette, warning), 500),
+    warning-bg:     rgba(245, 158, 11, 0.15),
+    danger:         map-get(map-get($palette, danger), 500),
+    danger-bg:      rgba(239, 68, 68, 0.15),
+    info:           map-get(map-get($palette, info), 500),
+    info-bg:        rgba(6, 182, 212, 0.15),
+);
+
+$font-family: (
+    sans:  ("Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif),
+    mono:  ("JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace),
+);
+
+$font-size: (
+    xs:   0.75rem,    
+    sm:   0.875rem,   
+    base: 1rem,       
+    lg:   1.125rem,   
+    xl:   1.25rem,    
+    2xl:  1.5rem,     
+    3xl:  1.875rem,   
+    4xl:  2.25rem,    
+    5xl:  3rem,       
+);
+
+$font-weight: (
+    regular:  400,
+    medium:   500,
+    semibold: 600,
+    bold:     700,
+);
+
+$line-height: (
+    none:    1,
+    tight:   1.25,
+    snug:    1.375,
+    normal:  1.5,
+    relaxed: 1.625,
+);
+
+$letter-spacing: (
+    tighter: -0.03em,
+    tight:   -0.015em,
+    normal:  0,
+    wide:    0.02em,
+);
+
+$space: (
+    0:  0,
+    1:  0.25rem,  
+    2:  0.5rem,   
+    3:  0.75rem,   
+    4:  1rem,      
+    5:  1.25rem,   
+    6:  1.5rem,    
+    8:  2rem,      
+    10: 2.5rem,    
+    12: 3rem,      
+    16: 4rem,      
+    20: 5rem,      
+    24: 6rem,      
+);
+
+$size: (
+    control-sm: 2rem,      
+    control-md: 2.5rem,    
+    control-lg: 3rem,      
+    icon-sm:    1rem,
+    icon-md:    1.25rem,
+    icon-lg:    1.5rem,
+    container-sm: 40rem,
+    container-md: 48rem,
+    container-lg: 64rem,
+    container-xl: 80rem,
+    tap-target: 2.75rem,
+);
+
+$border-width: (
+    none:   0,
+    thin:   1px,
+    medium: 2px,
+    thick:  4px,
+);
+
+$radius: (
+    none: 0,
+    sm:   0.25rem,
+    md:   0.375rem,
+    lg:   0.5rem,
+    xl:   0.75rem,
+    2xl:  1rem,
+    pill: 9999px,
+    circle: 50%,
+);
+
+$shadow: (
+    none: none,
+    xs:   0 1px 2px rgba(15, 23, 42, 0.06),
+    sm:   (0 1px 3px rgba(15, 23, 42, 0.10), 0 1px 2px rgba(15, 23, 42, 0.06)),
+    md:   (0 4px 8px rgba(15, 23, 42, 0.10), 0 2px 4px rgba(15, 23, 42, 0.06)),
+    lg:   (0 10px 20px rgba(15, 23, 42, 0.12), 0 4px 8px rgba(15, 23, 42, 0.06)),
+    xl:   (0 20px 40px rgba(15, 23, 42, 0.16), 0 8px 16px rgba(15, 23, 42, 0.08)),
+    focus: 0 0 0 3px rgba(51, 102, 255, 0.35),
+    inset: inset 0 1px 2px rgba(15, 23, 42, 0.08),
+);
+
+$z-index: (
+    base:     0,
+    raised:   1,
+    dropdown: 1000,
+    sticky:   1100,
+    fixed:    1200,
+    backdrop: 1300,
+    modal:    1400,
+    popover:  1500,
+    toast:    1600,
+    tooltip:  1700,
+);
+
+$duration: (
+    instant: 0ms,
+    fast:    120ms,
+    base:    200ms,
+    slow:    320ms,
+);
+
+$easing: (
+    standard:   cubic-bezier(0.2, 0, 0, 1),
+    enter:      cubic-bezier(0, 0, 0, 1),
+    exit:       cubic-bezier(0.3, 0, 1, 1),
+    linear:     linear,
+);
+
+$opacity: (
+    disabled: 0.5,
+    hover:    0.9,
+    overlay:  0.5,
+    subtle:   0.7,
+);
+
+$breakpoint: (
+    sm:  576px,
+    md:  768px,
+    lg:  992px,
+    xl:  1200px,
+    2xl: 1400px,
+);
+
+@function color($name, $shade: 500) {
+    @if not map-has-key($palette, $name) {
+        @error "Palette '#{$name}' tidak ditemukan.";
+    }
+    $group: map-get($palette, $name);
+    @if not map-has-key($group, $shade) {
+        @error "Shade '#{$shade}' tidak ada di palette '#{$name}'.";
+    }
+    @return map-get($group, $shade);
+}
+
+@function sem($name) {
+    @return var(--color-#{$name});
+}
+
+@function space($key)    { @return map-get($space, $key); }
+@function fs($key)       { @return map-get($font-size, $key); }
+@function fw($key)       { @return map-get($font-weight, $key); }
+@function lh($key)       { @return map-get($line-height, $key); }
+@function ls($key)       { @return map-get($letter-spacing, $key); }
+@function radius($key)   { @return map-get($radius, $key); }
+@function shadow($key)   { @return map-get($shadow, $key); }
+@function z($key)        { @return map-get($z-index, $key); }
+@function dur($key)      { @return map-get($duration, $key); }
+@function ease($key)     { @return map-get($easing, $key); }
+@function bw($key)       { @return map-get($border-width, $key); }
+@function size($key)     { @return map-get($size, $key); }
+@function op($key)       { @return map-get($opacity, $key); }
+@function font($key)     { @return map-get($font-family, $key); }
+
+@mixin respond-up($key) {
+    @media (min-width: map-get($breakpoint, $key)) { @content; }
+}
+
+@mixin respond-down($key) {
+    @media (max-width: (map-get($breakpoint, $key) - 0.02px)) { @content; }
+}
+
+@mixin focus-ring {
+    outline: none;
+    box-shadow: var(--shadow-focus);
+}
+
+@mixin transition($props: (background-color, border-color, color, box-shadow)) {
+    transition-property: $props;
+    transition-duration: var(--duration-base);
+    transition-timing-function: var(--easing-standard);
+}
+
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) { @content; }
+}
+
+@mixin truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@mixin emit-semantic($map) {
+    @each $name, $value in $map {
+        --color-#{$name}: #{$value};
+    }
+}
+
+:root {
+    @each $group, $shades in $palette {
+        @each $shade, $value in $shades {
+            --palette-#{$group}-#{$shade}: #{$value};
+        }
+    }
+
+    @include emit-semantic($semantic-light);
+
+    @each $k, $v in $font-family    { --font-#{$k}: #{$v}; }
+    @each $k, $v in $font-size      { --font-size-#{$k}: #{$v}; }
+    @each $k, $v in $font-weight    { --font-weight-#{$k}: #{$v}; }
+    @each $k, $v in $line-height    { --line-height-#{$k}: #{$v}; }
+    @each $k, $v in $letter-spacing { --letter-spacing-#{$k}: #{$v}; }
+
+    @each $k, $v in $space          { --space-#{$k}: #{$v}; }
+    @each $k, $v in $size           { --size-#{$k}: #{$v}; }
+    @each $k, $v in $border-width   { --border-width-#{$k}: #{$v}; }
+    @each $k, $v in $radius         { --radius-#{$k}: #{$v}; }
+    @each $k, $v in $shadow         { --shadow-#{$k}: #{$v}; }
+    @each $k, $v in $z-index        { --z-#{$k}: #{$v}; }
+
+    @each $k, $v in $duration       { --duration-#{$k}: #{$v}; }
+    @each $k, $v in $easing         { --easing-#{$k}: #{$v}; }
+    @each $k, $v in $opacity        { --opacity-#{$k}: #{$v}; }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        @include emit-semantic($semantic-dark);
+        --shadow-focus: 0 0 0 3px rgba(89, 141, 255, 0.45);
+    }
+}
+
+:root[data-theme="dark"] {
+    @include emit-semantic($semantic-dark);
+    --shadow-focus: 0 0 0 3px rgba(89, 141, 255, 0.45);
+}
+
+@include reduced-motion {
+    :root {
+        --duration-fast: 0ms;
+        --duration-base: 0ms;
+        --duration-slow: 0ms;
+    }
+}

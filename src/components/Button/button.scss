@@ -1,0 +1,37 @@
+@import "../../styles/token.scss";
+
+.btn {
+    padding: 10px 16px;
+    border: var(--border-width-thin) solid var(--color-border-default);
+    border-radius: 5px;
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+}
+
+.disabled {
+    background: color(primary, 100);
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    background: color(primary, 100);
+}
+
+.btn--small {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+@each $name in (primary,secondary, success, warning, danger, neutral, info) {
+    .btn--#{$name} {
+        background: var(--palette-#{$name}-600);
+        border-width: var(--border-width-thin);
+        color: var(--color-text-default);
+    }
+
+    .btn--#{$name}:hover {
+    background: var(--palette-#{$name}-700);
+    color: var(--color-text-default);
+}
+
+}

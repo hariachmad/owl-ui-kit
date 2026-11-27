@@ -1,0 +1,21 @@
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 100%;
+    max-width: 24rem;
+
+    > .btn {
+        align-self: flex-start;
+    }
+
+    &--full > .btn {
+        align-self: stretch;
+    }
+
+    &--wide {
+        max-width: 40rem;
+    }
+}

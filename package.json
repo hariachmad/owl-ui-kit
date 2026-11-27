@@ -1,0 +1,18 @@
+{
+  "name": "ui-kit",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.108.2",
+    "vite": "^8.4.0"
+  },
+  "dependencies": {
+    "@odoo/owl": "^2.8.3"
+  }
+}
